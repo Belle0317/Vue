@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<title>v-if</title>
+	<title>v-calculate</title>
 	<style type="text/css" media="screen">
 	 .active{
 	 	background: #a10;
@@ -11,19 +11,41 @@
 	</style>
 </head>
 <body>
-	<!-- v-if 控制流指令 -->
+	
 	<div id="app">
-	  <div v-if="role=='admin'">
-	  	管理员你好
-	  </div>
-	<div v-else-if="role=='hr'">
-	  	待查看简历列表：
-	  </div>	  
-     <div v-else>
-	  	你没有访问权限
-	  </div>		   
+	  <table border="1">
+	  		   	<thead>
+	  		   		<tr>
+	  		   			<th>学科</th>
+	  		   			<th>分数</th>
+	  		   		</tr>
+	  		   	</thead>
+	  		   	<tbody>
+	  		   		<tr>
+	  		   			<td>数学</td>
+	  		   			<td><input type="text" v-model="math"></td>
+	  		   		</tr>
+					<tr>
+	  		   			<td>数学</td>
+	  		   			<td><input type="text" v-model="engish"></td>
+	  		   		</tr>	  		   		
+					<tr>
+	  		   			<td>数学</td>
+	  		   			<td><input type="text" v-model="physics"></td>
+	  		   		</tr>	  
+					<tr>
+	  		   			<td>总分</td> 
+	  		   			<td>{{sum}}</td>
+	  		   		</tr>	
+					<tr>
+	  		   			<td>平均分</td>
+	  		   			<td>{{average}}</td>
+	  		   		</tr>		  		   		
+	  		   		 		   				   		
+	  		   	</tbody>
+	  		   </table>		   
 	</div>
 	<script src="../lib/vue.js"></script>
-	<script src="js/main.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
