@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+</head>
+<body>
+	<div id="app">
+		<!-- v-mode 可用的标签以及属性 -->
+	   <div>
+	   	 <span v-show='name'>你的名字：{{name}}</span>
+	   	 <input type="text" v-model.lazy="name">
+	   </div>
+		<div>
+			<span v-show='age'>你的年龄：{{age}}</span>
+			<input type="text" v-model.trim="age">
+		</div>
+		<div>
+			<span v-show='price'>价钱：{{price}}</span>
+			<input type="text" v-model.number="price">
+		</div>			
+		<div>
+			<label>女</label>
+			<input value="mail" type="radio" v-model="sex">
+		</div>	
+         <div>
+			<label>男</label>
+			<input value="famale" type="radio" v-model="sex">
+
+		</div>	
+
+		<textarea v-model="article"></textarea>	
+
+		<div>你来自哪里？</div>
+		<select v-model="from">
+			<option value="1">河北省</option>
+			<option value="2">遵化市</option>
+			<option value="3">平安城镇</option>
+		</select>
+		<div>你要去哪里？</div>
+		<select v-model="towhere" multiple>
+			<option value="1">河北省</option>
+			<option value="2">遵化市</option>
+			<option value="3">平安城镇</option>
+			<option value="4">河北省</option>
+			<option value="5">遵化市</option>
+			<option value="6">平安城镇</option>			
+		</select>		
+		{{towhere}}
+	</div>
+	<script src="../lib/vue.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
